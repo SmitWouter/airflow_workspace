@@ -11681,3 +11681,609 @@ airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOp
 **kwargs: {'postgres_comm_id': 'postgres'}
 [2023-10-03T14:33:37.104+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
 [2023-10-03T14:33:37.138+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.052 seconds
+[2023-10-03T14:34:07.252+0000] {processor.py:156} INFO - Started process (PID=692) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:34:07.253+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:34:07.254+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:07.254+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:07.266+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:07.264+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 144, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:34:07.266+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:07.291+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.041 seconds
+[2023-10-03T14:34:25.340+0000] {processor.py:156} INFO - Started process (PID=693) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:34:25.340+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:34:25.343+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:25.342+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:25.366+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:25.365+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 144, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:34:25.367+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:25.394+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.058 seconds
+[2023-10-03T14:34:31.392+0000] {processor.py:156} INFO - Started process (PID=694) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:34:31.392+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:34:31.394+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:31.394+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:31.407+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:31.406+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 144, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:34:31.407+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:31.429+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.039 seconds
+[2023-10-03T14:34:38.497+0000] {processor.py:156} INFO - Started process (PID=702) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:34:38.498+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:34:38.502+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:38.502+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:38.547+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:38.541+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 144, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:34:38.547+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:38.591+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.099 seconds
+[2023-10-03T14:34:46.586+0000] {processor.py:156} INFO - Started process (PID=703) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:34:46.596+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:34:46.599+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:46.599+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:46.649+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:46.641+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:34:46.650+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:46.706+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.123 seconds
+[2023-10-03T14:34:50.644+0000] {processor.py:156} INFO - Started process (PID=704) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:34:50.645+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:34:50.646+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:50.646+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:50.660+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:34:50.659+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:34:50.661+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:34:50.691+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.049 seconds
+[2023-10-03T14:35:02.694+0000] {processor.py:156} INFO - Started process (PID=705) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:02.694+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:02.696+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:02.696+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:02.709+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:02.707+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:02.709+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:02.748+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.056 seconds
+[2023-10-03T14:35:04.750+0000] {processor.py:156} INFO - Started process (PID=713) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:04.750+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:04.752+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:04.752+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:04.765+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:04.764+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:04.765+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:04.788+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.041 seconds
+[2023-10-03T14:35:08.820+0000] {processor.py:156} INFO - Started process (PID=715) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:08.821+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:08.822+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:08.822+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:08.839+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:08.837+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:08.839+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:08.869+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.051 seconds
+[2023-10-03T14:35:25.941+0000] {processor.py:156} INFO - Started process (PID=716) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:25.942+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:25.944+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:25.943+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:25.959+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:25.958+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:25.959+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:25.983+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.045 seconds
+[2023-10-03T14:35:27.958+0000] {processor.py:156} INFO - Started process (PID=717) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:27.959+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:27.961+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:27.961+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:27.980+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:27.979+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:27.980+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:28.016+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.061 seconds
+[2023-10-03T14:35:37.061+0000] {processor.py:156} INFO - Started process (PID=726) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:37.061+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:37.063+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:37.063+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:37.077+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:37.075+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:37.077+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:37.098+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.040 seconds
+[2023-10-03T14:35:40.077+0000] {processor.py:156} INFO - Started process (PID=727) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:40.077+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:40.079+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:40.078+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:40.091+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:40.090+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:40.091+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:40.113+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.038 seconds
+[2023-10-03T14:35:45.143+0000] {processor.py:156} INFO - Started process (PID=728) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:45.143+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:45.145+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:45.145+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:45.147+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:45.146+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 150
+    df_results.to_csv"/tmp/todays_results.csv", header=False, index=False)
+                                             ^
+SyntaxError: invalid syntax
+[2023-10-03T14:35:45.147+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:45.167+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.027 seconds
+[2023-10-03T14:35:48.166+0000] {processor.py:156} INFO - Started process (PID=729) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:48.166+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:48.168+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:48.168+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:48.170+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:48.169+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 150
+    df_results.to_csv()"/tmp/todays_results.csv", header=False, index=False)
+                                               ^
+SyntaxError: invalid syntax
+[2023-10-03T14:35:48.170+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:48.198+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.035 seconds
+[2023-10-03T14:35:49.194+0000] {processor.py:156} INFO - Started process (PID=730) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:49.194+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:49.195+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:49.195+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:49.208+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:49.206+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:49.208+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:49.234+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.043 seconds
+[2023-10-03T14:35:54.246+0000] {processor.py:156} INFO - Started process (PID=731) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:35:54.247+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:35:54.248+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:54.248+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:54.261+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:35:54.260+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:35:54.262+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:35:54.283+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.038 seconds
+[2023-10-03T14:36:03.297+0000] {processor.py:156} INFO - Started process (PID=739) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:36:03.298+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:36:03.299+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:03.299+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:03.311+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:03.310+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:36:03.312+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:03.334+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.039 seconds
+[2023-10-03T14:36:22.426+0000] {processor.py:156} INFO - Started process (PID=741) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:36:22.427+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:36:22.429+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:22.429+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:22.446+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:22.445+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 142, in <module>
+    """
+NameError: name 'POSTGRES_TABLE_NAME' is not defined
+[2023-10-03T14:36:22.446+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:22.473+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.049 seconds
+[2023-10-03T14:36:29.509+0000] {processor.py:156} INFO - Started process (PID=742) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:36:29.510+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:36:29.512+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:29.512+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:29.532+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:29.531+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 142, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:36:29.533+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:29.561+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.054 seconds
+[2023-10-03T14:36:36.566+0000] {processor.py:156} INFO - Started process (PID=750) to work on /opt/airflow/dags/launches.py
+[2023-10-03T14:36:36.567+0000] {processor.py:799} INFO - Processing file /opt/airflow/dags/launches.py for tasks to queue
+[2023-10-03T14:36:36.568+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:36.568+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:36.593+0000] {logging_mixin.py:149} INFO - [2023-10-03T14:36:36.586+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/launches.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/launches.py", line 143, in <module>
+    """
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 84, in __init__
+    super().__init__(conn_id=postgres_conn_id, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 231, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/operators/sql.py", line 133, in __init__
+    super().__init__(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 429, in apply_defaults
+    result = func(self, **kwargs, default_args=default_args)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 789, in __init__
+    f"Invalid arguments were passed to {self.__class__.__name__} (task_id: {task_id}). "
+airflow.exceptions.AirflowException: Invalid arguments were passed to PostgresOperator (task_id: create_postgres_table). Invalid arguments were:
+**kwargs: {'postgres_comm_id': 'postgres'}
+[2023-10-03T14:36:36.594+0000] {processor.py:811} WARNING - No viable dags retrieved from /opt/airflow/dags/launches.py
+[2023-10-03T14:36:36.623+0000] {processor.py:178} INFO - Processing /opt/airflow/dags/launches.py took 0.060 seconds

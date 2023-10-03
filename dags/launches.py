@@ -81,7 +81,6 @@ with DAG(
         response_results = response_dict["results"]
         df_results = pd.DataFrame([_extract_relevant_data(i) for i in response_results])
         df_results.to_parquet(path="/tmp/todays_results.parquet")
-        df_results.to_csv(path="/tmp/todays_results.csv", sep=',', header=False, encoding='utf-8', index=False)
 
     preprocess_data = PythonOperator(
         task_id="preprocess_data",
@@ -145,8 +144,11 @@ with DAG(
     )
 
     def _parquet_to_postgres():
+        df_results = pd.read_parquet("/tmp/todays_results.parquet")
+        df_results.to_csv("/tmp/todays_results.csv", header=False, index=False)
+
         postgres_hook = PostgresHook(postgres_conn_id="postgres")
-        postgres_hook.copy_expert(f"COPY " + POSTGRES_TABLE_NAME + " FROM STDIN WITH (FORMAT CSV)""", "/tmp/todays_results.parquet")
+        postgres_hook.copy_expert(f"COPY " + POSTGRES_TABLE_NAME + " FROM STDIN WITH (FORMAT CSV)""", "/tmp/todays_results.csv")
 
     write_parquet_to_postgres = PythonOperator(
         task_id="write_parquet_to_postgres",
