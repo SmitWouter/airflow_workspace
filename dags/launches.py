@@ -7,6 +7,7 @@ from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmpt
 from airflow.providers.google.cloud.transfers.local_to_gcs import LocalFilesystemToGCSOperator
 from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQueryOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+from airflow.hooks.postgres_hook import PostgresHook
 import pendulum
 import json
 import pandas as pd
@@ -15,6 +16,7 @@ GOOGLE_CLOUD_CONNECTION = "google_cloud_connection"
 GOOGLE_CLOUD_PROJECT_ID = "aflow-training-rabo-2023-10-02"
 GOOGLE_CLOUD_DATASET_ID = "ws_dataset"
 GOOGLE_CLOUD_TABLE_ID = "daily_rocket_launches"
+POSTGRES_TABLE_NAME = "rocket_launches"
 
 with DAG(
     dag_id="launches_getter",
@@ -79,6 +81,7 @@ with DAG(
         response_results = response_dict["results"]
         df_results = pd.DataFrame([_extract_relevant_data(i) for i in response_results])
         df_results.to_parquet(path="/tmp/todays_results.parquet")
+        df_results.to_csv(path="/tmp/todays_results.csv", sep=',', header=False, encoding='utf-8', index=False)
 
     preprocess_data = PythonOperator(
         task_id="preprocess_data",
@@ -109,7 +112,7 @@ with DAG(
     )
 
     upload_parquet_to_gcs = LocalFilesystemToGCSOperator(
-        tastk_id="upload_parquet_to_gcs",
+        task_id="upload_parquet_to_gcs",
         gcp_conn_id=GOOGLE_CLOUD_CONNECTION,
         src="/tmp/todays_results.parquet",
         dst="wouter/{{ ds }}.parquet",
@@ -122,15 +125,15 @@ with DAG(
         bucket=GOOGLE_CLOUD_PROJECT_ID,
         source_objects="wouter/{{ ds }}.parquet",
         source_format="parquet",
-        destination_project_dataset_table=f"{GOOGLE_CLOUD_DATASET_ID}.{GOOGLE_CLOUD_TABLE_ID}"
-        write_disposition="WRITE_APPEND"
+        destination_project_dataset_table=f"{GOOGLE_CLOUD_DATASET_ID}.{GOOGLE_CLOUD_TABLE_ID}",
+        write_disposition="WRITE_APPEND",
     )
 
     create_postgres_table = PostgresOperator(
         task_id="create_postgres_table",
         postgres_comm_id="postgres",
-        sql="""
-        CREATE TABLE IF NOT EXISTS rocket_launches (
+        sql=f"""
+        CREATE TABLE IF NOT EXISTS {POSTGRES_TABLE_NAME} (
             id SERIAL PRIMARY KEY,
             name VARCHAR NOT NULL,
             status VARCHAR NOT NULL,
@@ -141,12 +144,13 @@ with DAG(
         """
     )
 
-    bigquery_to_postgres = BigQueryToPostgresOperator(
-        task_id="bigquery_to_postgres",
-        postgres_conn_id="postgres"
-        dataset_table=f"{GOOGLE_CLOUD_DATASET_ID}.{GOOGLE_CLOUD_TABLE_ID}",
-        target_table_name="rocket_launches",
-        replace=False,
+    def _parquet_to_postgres():
+        postgres_hook = PostgresHook(postgres_conn_id="postgres")
+        postgres_hook.copy_expert(f"COPY " + POSTGRES_TABLE_NAME + " FROM STDIN WITH (FORMAT CSV)""", "/tmp/todays_results.parquet")
+
+    write_parquet_to_postgres = PythonOperator(
+        task_id="write_parquet_to_postgres",
+        python_callable=_parquet_to_postgres,
     )
 
     (
@@ -158,5 +162,6 @@ with DAG(
         create_empty_bigquery_table >>
         upload_parquet_to_gcs >>
         write_parquet_to_bq >>
-        create_postgres_table
+        create_postgres_table >>
+        write_parquet_to_postgres
     )
