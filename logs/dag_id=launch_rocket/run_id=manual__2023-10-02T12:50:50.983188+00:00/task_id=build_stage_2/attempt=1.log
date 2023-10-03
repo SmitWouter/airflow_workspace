@@ -1,0 +1,25 @@
+[2023-10-02T12:50:53.321+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launch_rocket.build_stage_2 manual__2023-10-02T12:50:50.983188+00:00 [queued]>
+[2023-10-02T12:50:53.332+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launch_rocket.build_stage_2 manual__2023-10-02T12:50:50.983188+00:00 [queued]>
+[2023-10-02T12:50:53.332+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-02T12:50:53.370+0000] {taskinstance.py:1350} INFO - Executing <Task(BashOperator): build_stage_2> on 2023-10-02 12:50:50.983188+00:00
+[2023-10-02T12:50:53.385+0000] {standard_task_runner.py:57} INFO - Started process 3427 to run task
+[2023-10-02T12:50:53.392+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launch_rocket', 'build_stage_2', 'manual__2023-10-02T12:50:50.983188+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/dag_exercise_1.py', '--cfg-path', '/tmp/tmpy6429v3i']
+[2023-10-02T12:50:53.393+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask build_stage_2
+[2023-10-02T12:50:53.472+0000] {task_command.py:410} INFO - Running <TaskInstance: launch_rocket.build_stage_2 manual__2023-10-02T12:50:50.983188+00:00 [running]> on host f21dc12153d8
+[2023-10-02T12:50:53.678+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launch_rocket' AIRFLOW_CTX_TASK_ID='build_stage_2' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T12:50:50.983188+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-10-02T12:50:50.983188+00:00'
+[2023-10-02T12:50:53.681+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-10-02T12:50:53.682+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'echo <Task(BashOperator): build_stage_2> is running in the <DAG: launch_rocket> pipeline']
+[2023-10-02T12:50:53.699+0000] {subprocess.py:86} INFO - Output:
+[2023-10-02T12:50:53.702+0000] {subprocess.py:93} INFO - /bin/bash: -c: line 1: syntax error near unexpected token `('
+[2023-10-02T12:50:53.702+0000] {subprocess.py:93} INFO - /bin/bash: -c: line 1: `echo <Task(BashOperator): build_stage_2> is running in the <DAG: launch_rocket> pipeline'
+[2023-10-02T12:50:53.703+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2023-10-02T12:50:53.720+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 211, in execute
+    f"Bash command failed. The command returned a non-zero exit code {result.exit_code}."
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2023-10-02T12:50:53.724+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=launch_rocket, task_id=build_stage_2, execution_date=20231002T125050, start_date=20231002T125053, end_date=20231002T125053
+[2023-10-02T12:50:53.758+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 8 for task build_stage_2 (Bash command failed. The command returned a non-zero exit code 2.; 3427)
+[2023-10-02T12:50:53.805+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2023-10-02T12:50:53.824+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

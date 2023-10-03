@@ -1,0 +1,326 @@
+[2023-10-03T07:54:00.768+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.http_sensor_check scheduled__2023-07-10T00:00:00+00:00 [queued]>
+[2023-10-03T07:54:00.850+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.http_sensor_check scheduled__2023-07-10T00:00:00+00:00 [queued]>
+[2023-10-03T07:54:00.854+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T07:54:00.986+0000] {taskinstance.py:1350} INFO - Executing <Task(HttpSensor): http_sensor_check> on 2023-07-10 00:00:00+00:00
+[2023-10-03T07:54:01.059+0000] {standard_task_runner.py:57} INFO - Started process 453 to run task
+[2023-10-03T07:54:01.085+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'http_sensor_check', 'scheduled__2023-07-10T00:00:00+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpth0apg05']
+[2023-10-03T07:54:01.102+0000] {standard_task_runner.py:85} INFO - Job 69: Subtask http_sensor_check
+[2023-10-03T07:54:01.506+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.http_sensor_check scheduled__2023-07-10T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T07:54:02.610+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='http_sensor_check' AIRFLOW_CTX_EXECUTION_DATE='2023-07-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-07-10T00:00:00+00:00'
+[2023-10-03T07:54:02.612+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:02.668+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:08.442+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:08.449+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:13.782+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:13.787+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:19.162+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:19.168+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:24.444+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:24.450+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:29.746+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:29.754+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:35.074+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:35.079+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:40.391+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:40.481+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:45.796+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:45.805+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:51.086+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:51.092+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:56.366+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:54:56.372+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:01.674+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:01.680+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:07.008+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:07.015+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:12.294+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:12.304+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:17.826+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:17.834+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:23.153+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:23.160+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:28.488+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:28.493+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:33.787+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:33.797+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:39.090+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:39.100+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:44.438+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:44.462+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:49.791+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:49.806+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:55:55.054+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:55:55.059+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:00.342+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:00.349+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:05.640+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:05.646+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:10.885+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:10.894+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:16.158+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:16.166+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:21.511+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:21.520+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:26.756+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:26.798+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:32.115+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:32.124+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:37.490+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:37.495+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:42.799+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:42.814+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:48.130+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:48.144+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:53.438+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:53.446+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:56:58.934+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:56:58.940+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:04.233+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:04.238+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:09.518+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:09.523+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:15.987+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:16.083+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:21.518+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:21.525+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:26.834+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:26.840+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:32.135+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:32.140+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:37.423+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:37.429+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:42.783+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:42.790+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:48.115+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:48.123+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:53.438+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:53.443+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:57:58.711+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:57:58.719+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:04.030+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:04.036+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:09.294+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:09.300+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:14.590+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:14.595+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:19.882+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:19.913+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:25.230+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:25.237+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:30.522+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:30.532+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:35.831+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:35.838+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:41.119+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:41.146+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:46.491+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:46.499+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:51.778+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:51.785+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:58:57.038+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:58:57.045+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:02.313+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:02.318+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:07.598+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:07.605+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:12.898+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:12.904+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:18.148+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:18.153+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:23.458+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:23.464+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:28.766+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:28.773+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:34.083+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:34.090+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:39.390+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:39.396+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:44.672+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:44.677+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:49.986+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:49.991+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:59:55.470+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:59:55.475+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:00.770+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:00.778+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:06.066+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:06.071+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:11.374+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:11.379+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:16.662+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:16.675+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:22.731+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:22.740+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:28.074+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:28.079+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:33.362+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:33.388+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:38.823+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:38.834+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:44.110+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:44.123+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:49.398+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:49.408+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:54.676+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:54.682+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:00:59.954+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:00:59.961+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:05.250+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:05.279+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:10.603+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:10.620+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:15.949+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:15.957+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:21.271+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:21.282+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:27.268+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:27.290+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:32.633+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:32.711+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:38.042+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:38.050+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:43.458+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:43.466+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:48.808+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:48.816+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:54.086+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:54.093+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:01:59.390+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:01:59.407+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:04.734+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:04.744+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:10.052+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:10.090+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:15.457+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:15.502+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:20.798+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:20.812+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:26.102+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:26.111+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:32.650+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:32.657+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:37.947+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:37.954+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:43.286+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:43.320+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:48.646+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:48.740+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:54.252+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:54.378+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:02:59.742+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:02:59.758+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:05.071+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:05.080+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:10.402+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:10.426+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:15.710+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:15.718+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:21.056+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:21.075+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:26.362+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:26.369+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:31.690+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:31.697+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:37.051+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:37.062+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:42.318+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:42.327+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:47.598+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:47.610+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:52.916+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:53.053+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:03:58.626+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:03:58.656+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:04.211+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:04.219+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:09.578+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:09.587+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:14.866+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:14.871+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:20.171+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:20.200+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:25.466+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:25.476+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:30.802+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:30.809+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:36.086+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:36.092+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:41.327+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:41.332+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:46.579+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:46.589+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:51.857+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:51.865+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:57.130+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:57.137+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:02.446+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:02.456+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:07.724+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:07.739+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:12.994+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:12.999+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:18.252+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:18.260+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:23.518+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:23.533+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:28.798+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:28.803+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:34.115+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:34.120+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:39.418+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:39.425+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:44.706+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:44.715+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:50.006+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:50.012+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:05:55.270+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:05:55.280+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:00.618+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:00.623+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:05.900+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:05.905+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:11.194+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:11.199+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:16.492+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:16.498+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:21.774+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:21.779+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:27.100+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:27.183+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:32.462+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:32.468+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:37.766+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:37.773+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:44.062+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:44.069+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:49.382+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:49.387+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:54.640+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:54.647+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:06:59.938+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:06:59.944+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:05.526+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:05.531+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:10.790+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:10.799+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:16.078+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:16.090+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:21.350+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:21.355+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:26.626+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:26.631+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:31.900+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:31.910+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:37.217+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:37.223+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:42.498+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:42.504+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:49.342+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:49.350+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:54.666+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:07:54.672+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:07:55.051+0000] {local_task_job_runner.py:299} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2023-10-03T08:07:55.052+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 453. PIDs of all processes in the group: [453]
+[2023-10-03T08:07:55.053+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 453
+[2023-10-03T08:07:55.053+0000] {taskinstance.py:1540} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-10-03T08:07:55.081+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=453, status='terminated', exitcode=0, started='07:54:00') (453) terminated with exit code 0

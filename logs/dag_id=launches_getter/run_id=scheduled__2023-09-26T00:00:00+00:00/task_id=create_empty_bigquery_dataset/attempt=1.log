@@ -1,0 +1,60 @@
+[2023-10-03T12:27:08.891+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.create_empty_bigquery_dataset scheduled__2023-09-26T00:00:00+00:00 [queued]>
+[2023-10-03T12:27:09.141+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.create_empty_bigquery_dataset scheduled__2023-09-26T00:00:00+00:00 [queued]>
+[2023-10-03T12:27:09.141+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T12:27:09.506+0000] {taskinstance.py:1350} INFO - Executing <Task(BigQueryCreateEmptyTableOperator): create_empty_bigquery_dataset> on 2023-09-26 00:00:00+00:00
+[2023-10-03T12:27:09.587+0000] {standard_task_runner.py:57} INFO - Started process 5599 to run task
+[2023-10-03T12:27:09.625+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'create_empty_bigquery_dataset', 'scheduled__2023-09-26T00:00:00+00:00', '--job-id', '203', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpb7xmvhqz']
+[2023-10-03T12:27:09.660+0000] {standard_task_runner.py:85} INFO - Job 203: Subtask create_empty_bigquery_dataset
+[2023-10-03T12:27:10.312+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.create_empty_bigquery_dataset scheduled__2023-09-26T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T12:27:12.329+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='create_empty_bigquery_dataset' AIRFLOW_CTX_EXECUTION_DATE='2023-09-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-26T00:00:00+00:00'
+[2023-10-03T12:27:12.537+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 1350, in execute
+    impersonation_chain=self.impersonation_chain,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 107, in __init__
+    impersonation_chain=impersonation_chain,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 234, in __init__
+    self.extras: dict = self.get_connection(self.gcp_conn_id).extra_dejson
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/base.py", line 72, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/connection.py", line 434, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `google_cloud_default` isn't defined
+[2023-10-03T12:27:12.758+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=launches_getter, task_id=create_empty_bigquery_dataset, execution_date=20230926T000000, start_date=20231003T122708, end_date=20231003T122712
+[2023-10-03T12:27:12.920+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 203 for task create_empty_bigquery_dataset (The conn_id `google_cloud_default` isn't defined; 5599)
+[2023-10-03T12:27:13.015+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2023-10-03T12:27:13.093+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-10-03T12:32:01.215+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.create_empty_bigquery_dataset scheduled__2023-09-26T00:00:00+00:00 [queued]>
+[2023-10-03T12:32:01.315+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.create_empty_bigquery_dataset scheduled__2023-09-26T00:00:00+00:00 [queued]>
+[2023-10-03T12:32:01.316+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T12:32:01.417+0000] {taskinstance.py:1350} INFO - Executing <Task(BigQueryCreateEmptyTableOperator): create_empty_bigquery_dataset> on 2023-09-26 00:00:00+00:00
+[2023-10-03T12:32:01.467+0000] {standard_task_runner.py:57} INFO - Started process 234 to run task
+[2023-10-03T12:32:01.512+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'create_empty_bigquery_dataset', 'scheduled__2023-09-26T00:00:00+00:00', '--job-id', '290', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpk1fizz9n']
+[2023-10-03T12:32:01.538+0000] {standard_task_runner.py:85} INFO - Job 290: Subtask create_empty_bigquery_dataset
+[2023-10-03T12:32:01.753+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.create_empty_bigquery_dataset scheduled__2023-09-26T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T12:32:02.145+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='create_empty_bigquery_dataset' AIRFLOW_CTX_EXECUTION_DATE='2023-09-26T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-26T00:00:00+00:00'
+[2023-10-03T12:32:02.164+0000] {base.py:73} INFO - Using connection ID 'google_cloud_connection' for task execution.
+[2023-10-03T12:32:02.182+0000] {bigquery.py:1365} INFO - Creating table
+[2023-10-03T12:32:02.764+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/operators/bigquery.py", line 1378, in execute
+    exists_ok=self.if_exists == IfExistAction.IGNORE,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/common/hooks/base_google.py", line 468, in inner_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/google/cloud/hooks/bigquery.py", line 407, in create_empty_table
+    table=table, exists_ok=exists_ok, retry=retry
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 755, in create_table
+    timeout=timeout,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 782, in _call_api
+    return call()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 288, in retry_wrapped_func
+    on_error=on_error,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/api_core/retry.py", line 190, in retry_target
+    return target()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/_http/__init__.py", line 494, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.NotFound: 404 POST https://bigquery.googleapis.com/bigquery/v2/projects/aflow-training-rabo-2023-10-02/datasets/ws_dataset/tables?prettyPrint=false: Not found: Dataset aflow-training-rabo-2023-10-02:ws_dataset
+[2023-10-03T12:32:02.818+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=launches_getter, task_id=create_empty_bigquery_dataset, execution_date=20230926T000000, start_date=20231003T123201, end_date=20231003T123202
+[2023-10-03T12:32:02.862+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 290 for task create_empty_bigquery_dataset (404 POST https://bigquery.googleapis.com/bigquery/v2/projects/aflow-training-rabo-2023-10-02/datasets/ws_dataset/tables?prettyPrint=false: Not found: Dataset aflow-training-rabo-2023-10-02:ws_dataset; 234)
+[2023-10-03T12:32:02.913+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2023-10-03T12:32:02.937+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

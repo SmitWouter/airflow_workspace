@@ -1,0 +1,18 @@
+[2023-10-03T08:55:15.580+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.get_todays_launches scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-03T08:55:15.603+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.get_todays_launches scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-03T08:55:15.603+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T08:55:15.651+0000] {taskinstance.py:1350} INFO - Executing <Task(SimpleHttpOperator): get_todays_launches> on 2023-10-02 00:00:00+00:00
+[2023-10-03T08:55:15.659+0000] {standard_task_runner.py:57} INFO - Started process 1619 to run task
+[2023-10-03T08:55:15.666+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'get_todays_launches', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '122', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpft3hcz9x']
+[2023-10-03T08:55:15.667+0000] {standard_task_runner.py:85} INFO - Job 122: Subtask get_todays_launches
+[2023-10-03T08:55:15.739+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.get_todays_launches scheduled__2023-10-02T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T08:55:15.808+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-10-03T08:55:15.863+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='get_todays_launches' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-03T08:55:15.864+0000] {http.py:123} INFO - Calling HTTP method
+[2023-10-03T08:55:15.871+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:55:16.222+0000] {http.py:127} INFO - {"count":0,"next":null,"previous":null,"results":[]}
+[2023-10-03T08:55:16.251+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launches_getter, task_id=get_todays_launches, execution_date=20231002T000000, start_date=20231003T085515, end_date=20231003T085516
+[2023-10-03T08:55:16.279+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T08:55:16.299+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

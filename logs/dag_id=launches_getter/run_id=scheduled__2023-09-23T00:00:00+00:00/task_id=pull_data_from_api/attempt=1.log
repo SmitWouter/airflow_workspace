@@ -1,0 +1,36 @@
+[2023-10-03T10:10:18.760+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.pull_data_from_api scheduled__2023-09-23T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:18.858+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.pull_data_from_api scheduled__2023-09-23T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:18.865+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T10:10:19.054+0000] {taskinstance.py:1350} INFO - Executing <Task(SimpleHttpOperator): pull_data_from_api> on 2023-09-23 00:00:00+00:00
+[2023-10-03T10:10:19.116+0000] {standard_task_runner.py:57} INFO - Started process 3048 to run task
+[2023-10-03T10:10:19.190+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'pull_data_from_api', 'scheduled__2023-09-23T00:00:00+00:00', '--job-id', '165', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpckt122oa']
+[2023-10-03T10:10:19.194+0000] {standard_task_runner.py:85} INFO - Job 165: Subtask pull_data_from_api
+[2023-10-03T10:10:19.576+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.pull_data_from_api scheduled__2023-09-23T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T10:10:19.933+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-10-03T10:10:20.554+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='pull_data_from_api' AIRFLOW_CTX_EXECUTION_DATE='2023-09-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-23T00:00:00+00:00'
+[2023-10-03T10:10:20.557+0000] {http.py:123} INFO - Calling HTTP method
+[2023-10-03T10:10:20.632+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T10:10:21.052+0000] {http.py:127} INFO - {"count":0,"next":null,"previous":null,"results":[]}
+[2023-10-03T10:10:21.256+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launches_getter, task_id=pull_data_from_api, execution_date=20230923T000000, start_date=20231003T101018, end_date=20231003T101021
+[2023-10-03T10:10:21.415+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T10:10:21.573+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-03T12:31:35.742+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.pull_data_from_api scheduled__2023-09-23T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:35.822+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.pull_data_from_api scheduled__2023-09-23T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:35.823+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T12:31:35.961+0000] {taskinstance.py:1350} INFO - Executing <Task(SimpleHttpOperator): pull_data_from_api> on 2023-09-23 00:00:00+00:00
+[2023-10-03T12:31:36.017+0000] {standard_task_runner.py:57} INFO - Started process 159 to run task
+[2023-10-03T12:31:36.064+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'pull_data_from_api', 'scheduled__2023-09-23T00:00:00+00:00', '--job-id', '264', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpz94yed3d']
+[2023-10-03T12:31:36.098+0000] {standard_task_runner.py:85} INFO - Job 264: Subtask pull_data_from_api
+[2023-10-03T12:31:36.440+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.pull_data_from_api scheduled__2023-09-23T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T12:31:36.879+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:205: AirflowContextDeprecationWarning: Accessing 'next_ds' from the template is deprecated and will be removed in a future version. Please use '{{ data_interval_end | ds }}' instead.
+  warnings.warn(_create_deprecation_warning(key, self._deprecation_replacements[key]))
+
+[2023-10-03T12:31:37.204+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='pull_data_from_api' AIRFLOW_CTX_EXECUTION_DATE='2023-09-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-23T00:00:00+00:00'
+[2023-10-03T12:31:37.206+0000] {http.py:123} INFO - Calling HTTP method
+[2023-10-03T12:31:37.266+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T12:31:39.147+0000] {http.py:127} INFO - {"count":0,"next":null,"previous":null,"results":[]}
+[2023-10-03T12:31:39.219+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launches_getter, task_id=pull_data_from_api, execution_date=20230923T000000, start_date=20231003T123135, end_date=20231003T123139
+[2023-10-03T12:31:39.318+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T12:31:39.432+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

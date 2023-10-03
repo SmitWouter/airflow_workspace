@@ -1,0 +1,22 @@
+[2023-10-03T08:03:11.687+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launch_rocket.launch scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-03T08:03:11.700+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launch_rocket.launch scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-03T08:03:11.700+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T08:03:11.732+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): launch> on 2023-10-02 00:00:00+00:00
+[2023-10-03T08:03:11.738+0000] {standard_task_runner.py:57} INFO - Started process 625 to run task
+[2023-10-03T08:03:11.741+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launch_rocket', 'launch', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/dag_exercise_1.py', '--cfg-path', '/tmp/tmp4s9px20x']
+[2023-10-03T08:03:11.741+0000] {standard_task_runner.py:85} INFO - Job 82: Subtask launch
+[2023-10-03T08:03:11.781+0000] {task_command.py:410} INFO - Running <TaskInstance: launch_rocket.launch scheduled__2023-10-02T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T08:03:11.879+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launch_rocket' AIRFLOW_CTX_TASK_ID='launch' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-03T08:03:11.891+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-10-03T08:03:11.891+0000] {logging_mixin.py:149} INFO - This script was executed at 2023-10-02T00:00:00+00:00
+[2023-10-03T08:03:11.891+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'next_execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_end' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2023-10-03T08:03:11.892+0000] {logging_mixin.py:149} INFO - Three days after execution is 2023-10-03T00:00:00+00:00
+[2023-10-03T08:03:11.892+0000] {logging_mixin.py:149} INFO - This script run date is 2023-10-02
+[2023-10-03T08:03:11.892+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-10-03T08:03:11.904+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launch_rocket, task_id=launch, execution_date=20231002T000000, start_date=20231003T080311, end_date=20231003T080311
+[2023-10-03T08:03:11.968+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T08:03:11.993+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

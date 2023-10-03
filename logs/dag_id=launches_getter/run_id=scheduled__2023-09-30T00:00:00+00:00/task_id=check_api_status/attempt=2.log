@@ -1,0 +1,16 @@
+[2023-10-03T12:27:09.120+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.check_api_status scheduled__2023-09-30T00:00:00+00:00 [queued]>
+[2023-10-03T12:27:09.418+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.check_api_status scheduled__2023-09-30T00:00:00+00:00 [queued]>
+[2023-10-03T12:27:09.419+0000] {taskinstance.py:1331} INFO - Starting attempt 2 of 2
+[2023-10-03T12:27:09.628+0000] {taskinstance.py:1350} INFO - Executing <Task(HttpSensor): check_api_status> on 2023-09-30 00:00:00+00:00
+[2023-10-03T12:27:09.665+0000] {standard_task_runner.py:57} INFO - Started process 5601 to run task
+[2023-10-03T12:27:09.726+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'check_api_status', 'scheduled__2023-09-30T00:00:00+00:00', '--job-id', '209', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmprnh_eduo']
+[2023-10-03T12:27:09.728+0000] {standard_task_runner.py:85} INFO - Job 209: Subtask check_api_status
+[2023-10-03T12:27:09.918+0000] {local_task_job_runner.py:122} ERROR - Received SIGTERM. Terminating subprocesses
+[2023-10-03T12:27:09.934+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 5601. PIDs of all processes in the group: [5601]
+[2023-10-03T12:27:09.935+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 5601
+[2023-10-03T12:27:10.177+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=5601, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='12:27:08') (5601) terminated with exit code Negsignal.SIGTERM
+[2023-10-03T12:27:10.177+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 143
+[2023-10-03T12:27:10.469+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-10-03T12:30:20.071+0000] {taskinstance.py:1119} INFO - Dependencies not met for <TaskInstance: launches_getter.check_api_status scheduled__2023-09-30T00:00:00+00:00 [running]>, dependency 'Task Instance State' FAILED: Task is in the 'running' state.
+[2023-10-03T12:30:20.091+0000] {taskinstance.py:1119} INFO - Dependencies not met for <TaskInstance: launches_getter.check_api_status scheduled__2023-09-30T00:00:00+00:00 [running]>, dependency 'Task Instance Not Running' FAILED: Task is in the running state
+[2023-10-03T12:30:20.103+0000] {local_task_job_runner.py:161} INFO - Task is not able to be run

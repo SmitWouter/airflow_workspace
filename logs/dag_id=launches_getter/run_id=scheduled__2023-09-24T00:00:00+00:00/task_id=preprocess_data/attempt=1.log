@@ -1,0 +1,35 @@
+[2023-10-03T10:10:30.407+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.preprocess_data scheduled__2023-09-24T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:30.483+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.preprocess_data scheduled__2023-09-24T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:30.484+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T10:10:30.611+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): preprocess_data> on 2023-09-24 00:00:00+00:00
+[2023-10-03T10:10:30.616+0000] {standard_task_runner.py:57} INFO - Started process 3085 to run task
+[2023-10-03T10:10:30.632+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'preprocess_data', 'scheduled__2023-09-24T00:00:00+00:00', '--job-id', '187', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmp0sgw1anc']
+[2023-10-03T10:10:30.633+0000] {standard_task_runner.py:85} INFO - Job 187: Subtask preprocess_data
+[2023-10-03T10:10:30.804+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.preprocess_data scheduled__2023-09-24T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T10:10:31.158+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-24T00:00:00+00:00'
+[2023-10-03T10:10:31.209+0000] {taskinstance.py:1847} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/launches.py", line 71, in _preprocess_data
+    df_results = pd.DataFrame([_extract_relevant_data(i) for i in response_results])
+NameError: name 'pd' is not defined
+[2023-10-03T10:10:31.223+0000] {taskinstance.py:1373} INFO - Marking task as FAILED. dag_id=launches_getter, task_id=preprocess_data, execution_date=20230924T000000, start_date=20231003T101030, end_date=20231003T101031
+[2023-10-03T10:10:31.305+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 187 for task preprocess_data (name 'pd' is not defined; 3085)
+[2023-10-03T10:10:31.342+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 1
+[2023-10-03T10:10:31.499+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-10-03T12:31:54.708+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.preprocess_data scheduled__2023-09-24T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:54.746+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.preprocess_data scheduled__2023-09-24T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:54.746+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T12:31:54.798+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): preprocess_data> on 2023-09-24 00:00:00+00:00
+[2023-10-03T12:31:54.811+0000] {standard_task_runner.py:57} INFO - Started process 213 to run task
+[2023-10-03T12:31:54.823+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'preprocess_data', 'scheduled__2023-09-24T00:00:00+00:00', '--job-id', '285', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpcno02syf']
+[2023-10-03T12:31:54.830+0000] {standard_task_runner.py:85} INFO - Job 285: Subtask preprocess_data
+[2023-10-03T12:31:54.995+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.preprocess_data scheduled__2023-09-24T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T12:31:55.518+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='preprocess_data' AIRFLOW_CTX_EXECUTION_DATE='2023-09-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-24T00:00:00+00:00'
+[2023-10-03T12:31:56.161+0000] {python.py:183} INFO - Done. Returned value was: None
+[2023-10-03T12:31:56.203+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launches_getter, task_id=preprocess_data, execution_date=20230924T000000, start_date=20231003T123154, end_date=20231003T123156
+[2023-10-03T12:31:56.331+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T12:31:56.446+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,46 @@
+[2023-10-03T07:52:34.963+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launch_rocket.http_sensor_check scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-03T07:52:34.970+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launch_rocket.http_sensor_check scheduled__2023-10-02T00:00:00+00:00 [queued]>
+[2023-10-03T07:52:34.970+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T07:52:34.989+0000] {taskinstance.py:1350} INFO - Executing <Task(HttpSensor): http_sensor_check> on 2023-10-02 00:00:00+00:00
+[2023-10-03T07:52:34.994+0000] {standard_task_runner.py:57} INFO - Started process 407 to run task
+[2023-10-03T07:52:34.997+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launch_rocket', 'http_sensor_check', 'scheduled__2023-10-02T00:00:00+00:00', '--job-id', '62', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmptfs2hw5v']
+[2023-10-03T07:52:34.997+0000] {standard_task_runner.py:85} INFO - Job 62: Subtask http_sensor_check
+[2023-10-03T07:52:35.038+0000] {task_command.py:410} INFO - Running <TaskInstance: launch_rocket.http_sensor_check scheduled__2023-10-02T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T07:52:35.142+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launch_rocket' AIRFLOW_CTX_TASK_ID='http_sensor_check' AIRFLOW_CTX_EXECUTION_DATE='2023-10-02T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-10-02T00:00:00+00:00'
+[2023-10-03T07:52:35.143+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:52:35.149+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:52:40.522+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:52:40.527+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:52:45.826+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:52:45.831+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:52:51.414+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:52:51.421+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:52:58.056+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:52:58.064+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:03.367+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:03.373+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:09.014+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:09.019+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:14.645+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:14.651+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:19.963+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:19.968+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:25.362+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:25.369+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:30.660+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:30.666+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:36.034+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:36.040+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:41.334+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:41.339+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:46.642+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:46.648+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:51.954+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:51.966+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:53:57.450+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T07:53:57.462+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T07:54:00.767+0000] {local_task_job_runner.py:299} WARNING - State of this instance has been externally set to removed. Terminating instance.
+[2023-10-03T07:54:00.771+0000] {process_utils.py:135} INFO - Sending Signals.SIGTERM to group 407. PIDs of all processes in the group: [407]
+[2023-10-03T07:54:00.778+0000] {process_utils.py:86} INFO - Sending the signal Signals.SIGTERM to group 407
+[2023-10-03T07:54:00.779+0000] {taskinstance.py:1540} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-10-03T07:54:01.051+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=407, status='terminated', exitcode=0, started='07:52:34') (407) terminated with exit code 0

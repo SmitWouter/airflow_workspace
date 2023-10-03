@@ -1,0 +1,26 @@
+[2023-10-03T10:10:29.352+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.check_data_in_a_day scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:29.467+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.check_data_in_a_day scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:29.467+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T10:10:29.688+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): check_data_in_a_day> on 2023-09-29 00:00:00+00:00
+[2023-10-03T10:10:29.745+0000] {standard_task_runner.py:57} INFO - Started process 3082 to run task
+[2023-10-03T10:10:29.757+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'check_data_in_a_day', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '186', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpk7zxylbk']
+[2023-10-03T10:10:29.768+0000] {standard_task_runner.py:85} INFO - Job 186: Subtask check_data_in_a_day
+[2023-10-03T10:10:29.963+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.check_data_in_a_day scheduled__2023-09-29T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T10:10:30.397+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='check_data_in_a_day' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-10-03T10:10:30.447+0000] {taskinstance.py:1454} INFO - No data found on date 2023-09-29
+[2023-10-03T10:10:30.501+0000] {taskinstance.py:1373} INFO - Marking task as SKIPPED. dag_id=launches_getter, task_id=check_data_in_a_day, execution_date=20230929T000000, start_date=20231003T101029, end_date=20231003T101030
+[2023-10-03T10:10:30.657+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T10:10:30.842+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-10-03T12:31:48.198+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.check_data_in_a_day scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:48.370+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.check_data_in_a_day scheduled__2023-09-29T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:48.374+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T12:31:48.550+0000] {taskinstance.py:1350} INFO - Executing <Task(PythonOperator): check_data_in_a_day> on 2023-09-29 00:00:00+00:00
+[2023-10-03T12:31:48.614+0000] {standard_task_runner.py:57} INFO - Started process 193 to run task
+[2023-10-03T12:31:48.641+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'check_data_in_a_day', 'scheduled__2023-09-29T00:00:00+00:00', '--job-id', '274', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpuj1xmu7x']
+[2023-10-03T12:31:48.664+0000] {standard_task_runner.py:85} INFO - Job 274: Subtask check_data_in_a_day
+[2023-10-03T12:31:48.927+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.check_data_in_a_day scheduled__2023-09-29T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T12:31:49.826+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='check_data_in_a_day' AIRFLOW_CTX_EXECUTION_DATE='2023-09-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-29T00:00:00+00:00'
+[2023-10-03T12:31:49.888+0000] {taskinstance.py:1454} INFO - No data found on date 2023-09-29
+[2023-10-03T12:31:49.950+0000] {taskinstance.py:1373} INFO - Marking task as SKIPPED. dag_id=launches_getter, task_id=check_data_in_a_day, execution_date=20230929T000000, start_date=20231003T123148, end_date=20231003T123149
+[2023-10-03T12:31:50.062+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T12:31:50.185+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check

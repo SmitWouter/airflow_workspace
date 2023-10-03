@@ -1,0 +1,30 @@
+[2023-10-03T10:10:14.373+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.check_api_status scheduled__2023-09-27T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:14.441+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.check_api_status scheduled__2023-09-27T00:00:00+00:00 [queued]>
+[2023-10-03T10:10:14.455+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T10:10:14.588+0000] {taskinstance.py:1350} INFO - Executing <Task(HttpSensor): check_api_status> on 2023-09-27 00:00:00+00:00
+[2023-10-03T10:10:14.606+0000] {standard_task_runner.py:57} INFO - Started process 3031 to run task
+[2023-10-03T10:10:14.627+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'check_api_status', 'scheduled__2023-09-27T00:00:00+00:00', '--job-id', '159', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpqngyyiiy']
+[2023-10-03T10:10:14.630+0000] {standard_task_runner.py:85} INFO - Job 159: Subtask check_api_status
+[2023-10-03T10:10:15.008+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.check_api_status scheduled__2023-09-27T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T10:10:16.064+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='check_api_status' AIRFLOW_CTX_EXECUTION_DATE='2023-09-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-27T00:00:00+00:00'
+[2023-10-03T10:10:16.065+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T10:10:16.105+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T10:10:16.739+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2023-10-03T10:10:16.817+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launches_getter, task_id=check_api_status, execution_date=20230927T000000, start_date=20231003T101014, end_date=20231003T101016
+[2023-10-03T10:10:17.166+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T10:10:17.710+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-10-03T12:31:23.619+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.check_api_status scheduled__2023-09-27T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:23.825+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.check_api_status scheduled__2023-09-27T00:00:00+00:00 [queued]>
+[2023-10-03T12:31:23.827+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T12:31:24.031+0000] {taskinstance.py:1350} INFO - Executing <Task(HttpSensor): check_api_status> on 2023-09-27 00:00:00+00:00
+[2023-10-03T12:31:24.164+0000] {standard_task_runner.py:57} INFO - Started process 125 to run task
+[2023-10-03T12:31:24.231+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'check_api_status', 'scheduled__2023-09-27T00:00:00+00:00', '--job-id', '255', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmp37nz3pyk']
+[2023-10-03T12:31:24.244+0000] {standard_task_runner.py:85} INFO - Job 255: Subtask check_api_status
+[2023-10-03T12:31:24.814+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.check_api_status scheduled__2023-09-27T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T12:31:25.679+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='check_api_status' AIRFLOW_CTX_EXECUTION_DATE='2023-09-27T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-09-27T00:00:00+00:00'
+[2023-10-03T12:31:25.694+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T12:31:25.774+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T12:31:26.252+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2023-10-03T12:31:26.295+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launches_getter, task_id=check_api_status, execution_date=20230927T000000, start_date=20231003T123123, end_date=20231003T123126
+[2023-10-03T12:31:26.429+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T12:31:26.591+0000] {taskinstance.py:2674} INFO - 1 downstream tasks scheduled from follow-on schedule check

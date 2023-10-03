@@ -1,0 +1,15 @@
+[2023-10-03T08:04:19.438+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: launches_getter.http_sensor_check scheduled__2023-08-05T00:00:00+00:00 [queued]>
+[2023-10-03T08:04:19.452+0000] {taskinstance.py:1125} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: launches_getter.http_sensor_check scheduled__2023-08-05T00:00:00+00:00 [queued]>
+[2023-10-03T08:04:19.452+0000] {taskinstance.py:1331} INFO - Starting attempt 1 of 1
+[2023-10-03T08:04:19.481+0000] {taskinstance.py:1350} INFO - Executing <Task(HttpSensor): http_sensor_check> on 2023-08-05 00:00:00+00:00
+[2023-10-03T08:04:19.491+0000] {standard_task_runner.py:57} INFO - Started process 688 to run task
+[2023-10-03T08:04:19.500+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'launches_getter', 'http_sensor_check', 'scheduled__2023-08-05T00:00:00+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/launches.py', '--cfg-path', '/tmp/tmpg49554el']
+[2023-10-03T08:04:19.506+0000] {standard_task_runner.py:85} INFO - Job 100: Subtask http_sensor_check
+[2023-10-03T08:04:19.665+0000] {task_command.py:410} INFO - Running <TaskInstance: launches_getter.http_sensor_check scheduled__2023-08-05T00:00:00+00:00 [running]> on host f21dc12153d8
+[2023-10-03T08:04:19.972+0000] {taskinstance.py:1570} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='launches_getter' AIRFLOW_CTX_TASK_ID='http_sensor_check' AIRFLOW_CTX_EXECUTION_DATE='2023-08-05T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-08-05T00:00:00+00:00'
+[2023-10-03T08:04:19.973+0000] {http.py:122} INFO - Poking: 
+[2023-10-03T08:04:19.990+0000] {base.py:73} INFO - Using connection ID 'thespacedevs_dev' for task execution.
+[2023-10-03T08:04:20.346+0000] {base.py:255} INFO - Success criteria met. Exiting.
+[2023-10-03T08:04:20.387+0000] {taskinstance.py:1373} INFO - Marking task as SUCCESS. dag_id=launches_getter, task_id=http_sensor_check, execution_date=20230805T000000, start_date=20231003T080419, end_date=20231003T080420
+[2023-10-03T08:04:20.488+0000] {local_task_job_runner.py:232} INFO - Task exited with return code 0
+[2023-10-03T08:04:20.511+0000] {taskinstance.py:2674} INFO - 0 downstream tasks scheduled from follow-on schedule check
